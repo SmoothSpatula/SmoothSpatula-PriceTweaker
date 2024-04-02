@@ -14,7 +14,7 @@ This mod depends on the [Return Of Modding](https://github.com/return-of-modding
 * Choose the price factor in the Mod menu.
 
 ## Disclaimer
-It also applies this 'new price' to the drone scrapper and drone combiner cost text, but the  actual cost for those interactables does not change.
+It also applies this 'new price' to the 'price text' of the drone scrapper and drone combiner, but their actual cost does not change.
   
 ## Special Thanks To
 * The Return Of Modding team
