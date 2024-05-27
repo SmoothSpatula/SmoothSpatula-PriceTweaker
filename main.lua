@@ -1,22 +1,17 @@
--- Price Tweaker v1.0.0
+-- Price Tweaker v1.0.1
 -- SmoothSpatula
 
 log.info("Successfully loaded ".._ENV["!guid"]..".")
-Toml = require("tomlHelper")
 
 -- ========== Parameters ==========
 
-local default_params = {
-    price_tweaker_enabled = true,
-    price_factor = 1.0
-}
-
-local params = Toml.load_cfg(_ENV["!guid"])
-
-if not params then
-    Toml.save_cfg(_ENV["!guid"], default_params)
-    params = default_params
-end
+mods.on_all_mods_loaded(function() for k, v in pairs(mods) do if type(v) == "table" and v.tomlfuncs then Toml = v end end 
+    params = {
+        price_tweaker_enabled = true,
+        price_factor = 1.0
+    }
+    params = Toml.config_update(_ENV["!guid"], params) -- Load Save
+end)
 
 local isChanged = false
 
