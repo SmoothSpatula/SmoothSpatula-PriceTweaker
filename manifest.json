@@ -5,6 +5,6 @@
 	"description": "Modify the price of every interactable by a custom factor",
 	"dependencies": [
 		"ReturnOfModding-ReturnOfModding-1.0.20",
-		"SmoothSpatula-TomlHelper-1.0.0"
+		"SmoothSpatula-TomlHelper-1.0.1"
 	]
 }
