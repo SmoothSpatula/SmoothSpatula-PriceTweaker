@@ -1,4 +1,4 @@
--- Price Tweaker v1.0.1
+-- Price Tweaker v1.0.2
 -- SmoothSpatula
 
 log.info("Successfully loaded ".._ENV["!guid"]..".")
@@ -38,6 +38,8 @@ end)
 -- Change the base price of every interactable by a custom factor
 gm.pre_script_hook(gm.constants.interactable_init_cost, function(self, other, result, args)
     if not params['price_tweaker_enabled'] then return end
+
+    if args[2].value > 2.0 then return end -- don't change the price of drone interactables/keycard
 
     args[3].value = args[3].value * params['price_factor']
 end)
