@@ -1,5 +1,5 @@
 # SmoothSpatula-PriceTweaker
-Modify the price of every interactable by a custom factor
+Modify the price of every interactable (except drone or keycard costs) by a custom factor
 
 ---
 
